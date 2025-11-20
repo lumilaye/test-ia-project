@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  /* Gradiente inspirado en la imagen proporcionada: Azul oscuro profundo a un azul/morado más claro */
+  background: linear-gradient(180deg, #1a103c 0%, #4a4e8e 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Capa de estrellas con animación */
+.stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stars-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estrellas pequeñas - Fondo general */
+.stars-small {
+    background-image: 
+        radial-gradient(white 1px, transparent 1.5px),
+        radial-gradient(white 1px, transparent 1.5px);
+    background-size: 150px 150px, 200px 200px; /* Aumentado para reducir densidad */
+    background-position: 0 0, 40px 60px;
+    opacity: 0.4;
+    animation: twinkle 4s infinite ease-in-out alternate;
+}
+
+/* Estrellas medianas - Menos cantidad */
+.stars-medium {
+    background-image: 
+        radial-gradient(white 1.5px, transparent 2px),
+        radial-gradient(white 1.5px, transparent 2px);
+    background-size: 300px 300px, 400px 400px; /* Aumentado para reducir densidad */
+    background-position: 20px 30px, 130px 270px;
+    opacity: 0.6;
+    animation: twinkle 3s infinite ease-in-out alternate-reverse;
+}
+
+/* Estrellas grandes/brillantes - Pocas y destacan más */
+.stars-large {
+    background-image: 
+        radial-gradient(white 2px, transparent 3px);
+    background-size: 550px 550px; /* Aumentado para reducir densidad */
+    background-position: 70px 100px;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; filter: drop-shadow(0 0 2px white); }
+}
+
+/* Estrellas Fugaces */
+.shooting-star {
+    position: absolute;
+    height: 2px;
+    /* Cabeza a la derecha (100%), cola transparente a la izquierda (0%) */
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 999px;
+    opacity: 0;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Estrella 1: Diagonal clásica desde abajo-izquierda */
+.shooting-star:nth-child(4) {
+    top: 70%;
+    left: 0;
+    width: 120px;
+    /* Rotamos primero el eje, luego trasladamos en ese eje */
+    transform-origin: left center;
+    animation: shooting-real-1 50s ease-out infinite;
+    animation-delay: 2s;
+}
+
+/* Estrella 2: Más vertical, desde abajo */
+.shooting-star:nth-child(5) {
+    top: 100%;
+    left: 30%;
+    width: 100px;
+    transform-origin: left center;
+    animation: shooting-real-2 75s ease-out infinite;
+    animation-delay: 20s;
+}
+
+/* Estrella 3: Más horizontal, cruzando el cielo */
+.shooting-star:nth-child(6) {
+    top: 60%;
+    left: -50px;
+    width: 150px;
+    transform-origin: left center;
+    animation: shooting-real-3 100s ease-out infinite;
+    animation-delay: 40s;
+}
+
+/* Animamos solo translateX para que se mueva SIEMPRE en la dirección de su rotación */
+@keyframes shooting-real-1 {
+    0% {
+        opacity: 1;
+        transform: rotate(-35deg) translateX(-150px);
+    }
+    2% { /* Vuelo rápido (ajustado para duración larga) */
+        opacity: 1;
+        transform: rotate(-35deg) translateX(150vw);
+    }
+    3% { opacity: 0; transform: rotate(-35deg) translateX(150vw); } /* Desaparece */
+    100% { opacity: 0; transform: rotate(-35deg) translateX(150vw); } /* Espera */
+}
+
+@keyframes shooting-real-2 {
+    0% {
+        opacity: 1;
+        transform: rotate(-65deg) translateX(-150px);
+    }
+    2% {
+        opacity: 1;
+        transform: rotate(-65deg) translateX(150vh); /* Usamos vh porque va hacia arriba */
+    }
+    3% { opacity: 0; transform: rotate(-65deg) translateX(150vh); }
+    100% { opacity: 0; transform: rotate(-65deg) translateX(150vh); }
+}
+
+@keyframes shooting-real-3 {
+    0% {
+        opacity: 1;
+        transform: rotate(-15deg) translateX(-150px);
+    }
+    3% { /* Un poco más lenta */
+        opacity: 1;
+        transform: rotate(-15deg) translateX(150vw);
+    }
+    4% { opacity: 0; transform: rotate(-15deg) translateX(150vw); }
+    100% { opacity: 0; transform: rotate(-15deg) translateX(150vw); }
+}
