@@ -16,9 +16,9 @@ const HeroSection = () => {
       </div>
 
       {/* Header: Logo & Socials */}
-      <header className="w-full z-20 pt-12 px-8 md:px-24 flex justify-between items-start">
-        <div className="w-48 md:w-64">
-          <img src="/assets/logo-integrado.svg" alt="Angelica Santamilla Art" className="w-full h-auto" />
+      <header className="w-full z-20 pt-8 md:pt-12 px-6 md:px-24 flex justify-between items-start">
+        <div className="w-40 md:w-64">
+          <img src="assets/logo-integrado.svg" alt="Angelica Santamilla Art" className="w-full h-auto" />
         </div>
         
         <div className="flex space-x-4 mt-2">
@@ -38,15 +38,15 @@ const HeroSection = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto px-8 md:px-24 flex flex-col md:flex-row items-center relative z-10 pb-24 md:pb-32">
+      <main className="flex-grow container mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center relative z-10 pb-12 md:pb-32">
         
         {/* Left Content - Text */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-start space-y-6">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-start space-y-6 mt-4 md:mt-0">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-bold leading-tight tracking-wide"
+            className="text-4xl md:text-5xl font-bold leading-tight tracking-wide"
           >
             Convierte a tu <br />
             <span className="text-brand-pink">mejor amigo</span> en arte
@@ -80,9 +80,9 @@ const HeroSection = () => {
         </div>
 
         {/* Right Content - Product Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-10 md:mt-0 relative">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-6 md:mt-0 relative">
            {/* Subtle glow behind image */}
-           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-pink/10 rounded-full blur-[80px] -z-10"></div>
+           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-brand-pink/10 rounded-full blur-[60px] md:blur-[80px] -z-10"></div>
 
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
@@ -91,9 +91,9 @@ const HeroSection = () => {
             className="relative w-full flex justify-center md:justify-end"
           >
             <img 
-              src="/assets/case-pastor.svg" 
+              src="assets/case-pastor.svg" 
               alt="Case Personalizado Pastor" 
-              className="w-auto h-auto max-h-[60vh] drop-shadow-2xl transform hover:scale-105 transition-transform duration-700"
+              className="w-auto h-auto max-h-[35vh] md:max-h-[60vh] drop-shadow-2xl transform hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
         </div>

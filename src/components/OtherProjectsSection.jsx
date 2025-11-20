@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 const projects = [
   {
     id: 1,
-    image: "/assets/carrete-case-2.jpg", // Placeholder, user should replace with painting/keychain image
+    image: "assets/carrete-case-2.jpg", // Placeholder, user should replace with painting/keychain image
     title: "Cuadros Personalizados",
     description: "Inmortaliza a tu mascota en un lienzo único pintado a mano. Una obra de arte para decorar tu hogar."
   },
   {
     id: 2,
-    image: "/assets/carrete-case-1.svg", // Placeholder
+    image: "assets/carrete-case-1.svg", // Placeholder
     title: "Llaveros Exclusivos",
     description: "Lleva un pequeño recuerdo a todas partes. Llaveros detallados y resistentes con la cara de tu peludo."
   }
@@ -28,18 +28,18 @@ const OtherProjectsSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#F8F7FF] py-20 md:py-32 relative">
-      <div className="container mx-auto px-8 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24">
+    <section className="w-full bg-[#F8F7FF] py-16 md:py-32 relative">
+      <div className="container mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24">
         
         {/* Left Side - Navigation & Image */}
         <div className="w-full md:w-1/2 flex items-center justify-center gap-4 md:gap-8">
             {/* Left Arrow */}
             <button 
                 onClick={prevProject}
-                className="w-10 h-10 md:w-12 md:h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none shrink-0"
+                className="w-12 h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none shrink-0"
                 aria-label="Previous Project"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
             </button>
@@ -63,10 +63,10 @@ const OtherProjectsSection = () => {
             {/* Right Arrow */}
             <button 
                 onClick={nextProject}
-                className="w-10 h-10 md:w-12 md:h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none shrink-0"
+                className="w-12 h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none shrink-0"
                 aria-label="Next Project"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             </button>

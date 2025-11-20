@@ -37,10 +37,10 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="w-full bg-white py-20 md:py-32">
-      <div className="container mx-auto px-8 md:px-24">
+    <section className="w-full bg-white py-16 md:py-32">
+      <div className="container mx-auto px-6 md:px-24">
         
-        <div className="text-center mb-16 md:mb-24">
+        <div className="text-center mb-12 md:mb-24">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1a103c] mb-6">
             ¿Cómo funciona la magia?
           </h2>

@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-white py-20 md:py-32 relative overflow-hidden">
+    <section className="w-full bg-white py-16 md:py-32 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#F3E8FF] rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#FFE4E6] rounded-full mix-blend-multiply filter blur-3xl opacity-70 translate-y-1/2 -translate-x-1/2"></div>
 
-      <div className="container mx-auto px-8 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
+      <div className="container mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
         
         {/* Image Side */}
         <motion.div 
@@ -22,7 +22,7 @@ const AboutSection = () => {
                 {/* Frame effect */}
                 <div className="absolute inset-0 border-2 border-[#8B5CF6] rounded-tl-[100px] rounded-br-[100px] translate-x-4 translate-y-4"></div>
                 <img 
-                    src="/assets/carrete-case-2.jpg" // Placeholder for artist photo
+                    src="assets/carrete-case-2.jpg" // Placeholder for artist photo
                     alt="Angélica pintando" 
                     className="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px] shadow-xl relative z-10"
                 />

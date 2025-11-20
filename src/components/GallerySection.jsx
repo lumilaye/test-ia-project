@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  "/assets/carrete-case-1.svg",
-  "/assets/carrete-case-2.jpg",
+  "assets/carrete-case-1.svg",
+  "assets/carrete-case-2.jpg",
+  "assets/carrete-case-1.svg",
+  "assets/carrete-case-2.jpg",
+  "assets/carrete-case-1.svg",
+  "assets/carrete-case-2.jpg",
 ];
 
 const GallerySection = () => {
@@ -18,8 +22,8 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="w-full bg-white py-20 md:py-32 relative overflow-hidden">
-      <div className="container mx-auto px-8 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24">
+    <section className="w-full bg-white py-16 md:py-32 relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-24">
         
         {/* Left Side - Carousel */}
         <div className="w-full md:w-1/2 relative flex justify-center items-center">
@@ -44,10 +48,10 @@ const GallerySection = () => {
                {/* Left Arrow */}
                <button 
                  onClick={prevImage}
-                 className="pointer-events-auto w-10 h-10 md:w-12 md:h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
+                 className="pointer-events-auto w-12 h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
                  aria-label="Previous Image"
                >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                  </svg>
                </button>
@@ -55,10 +59,10 @@ const GallerySection = () => {
                {/* Right Arrow */}
                <button 
                  onClick={nextImage}
-                 className="pointer-events-auto w-10 h-10 md:w-12 md:h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
+                 className="pointer-events-auto w-12 h-12 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
                  aria-label="Next Image"
                >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                  </svg>
                </button>

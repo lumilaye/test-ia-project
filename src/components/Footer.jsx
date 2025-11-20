@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start space-y-6">
           <div className="w-16 md:w-20">
              {/* Using logo-2.svg which seems to be the icon */}
-             <img src="/assets/logo-2.svg" alt="Logo Icon" className="w-full h-auto" />
+             <img src="assets/logo-2.svg" alt="Logo Icon" className="w-full h-auto" />
           </div>
           <div className="text-gray-600 text-sm space-y-2">
             <p className="font-medium">+57 318 8041255</p>

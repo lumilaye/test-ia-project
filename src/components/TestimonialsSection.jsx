@@ -7,33 +7,33 @@ const testimonials = [
     dogName: "Bruno",
     owner: "Camila S.",
     quote: "¡Es idéntico! Capturaron su mirada a la perfección. Lloré de emoción cuando abrí el paquete.",
-    realImage: "/assets/carrete-case-2.jpg", // Placeholder for real dog
-    artImage: "/assets/carrete-case-1.svg"  // Placeholder for painted case
+    realImage: "assets/carrete-case-2.jpg", // Placeholder for real dog
+    artImage: "assets/carrete-case-1.svg"  // Placeholder for painted case
   },
   {
     id: 2,
     dogName: "Lola",
     owner: "Andrés M.",
     quote: "El mejor regalo que me he dado. La calidad del detalle es impresionante, parece que me estuviera mirando.",
-    realImage: "/assets/carrete-case-2.jpg", // Placeholder
-    artImage: "/assets/carrete-case-1.svg"  // Placeholder
+    realImage: "assets/carrete-case-2.jpg", // Placeholder
+    artImage: "assets/carrete-case-1.svg"  // Placeholder
   },
   {
     id: 3,
     dogName: "Rocky",
     owner: "Mariana V.",
     quote: "No es solo un case, es una obra de arte. Me encanta llevar a Rocky conmigo a todas partes.",
-    realImage: "/assets/carrete-case-2.jpg", // Placeholder
-    artImage: "/assets/carrete-case-1.svg"  // Placeholder
+    realImage: "assets/carrete-case-2.jpg", // Placeholder
+    artImage: "assets/carrete-case-1.svg"  // Placeholder
   }
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="w-full bg-[#FDF2F8] py-20 md:py-32"> {/* Soft pink background */}
-      <div className="container mx-auto px-8 md:px-24">
+    <section className="w-full bg-[#FDF2F8] py-16 md:py-32"> {/* Soft pink background */}
+      <div className="container mx-auto px-6 md:px-24">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1a103c] mb-6">
             Historias de Amor
           </h2>
